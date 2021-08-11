@@ -1,0 +1,449 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  transition: 0.3s;
+}
+
+@mixin flexInline {
+  display: flex;
+  align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap");
+// font-family: 'Cabin', sans-serif;
+
+$h: #121212; //Heading
+$p: #5f594a; //Paragraph
+
+//Base
+:root {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+}
+
+.m5 {
+  margin-left: 5px;
+}
+
+.container {
+  margin: 0 5%;
+}
+
+.bg {
+  width: 100%;
+  background-color: #f0eeeb;
+  border-radius: 5px;
+}
+
+.anounc {
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 0.8rem;
+}
+
+// Header
+
+.header {
+  padding-top: 20px;
+  @include flexInline;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $h;
+  }
+
+  .nav {
+    @include flexInline;
+    justify-content: space-around;
+    width: 15rem;
+
+    a {
+      text-decoration: none;
+      color: $p;
+      font-size: 1.1rem;
+      font-weight: bold;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .up {
+      display: none;
+    }
+  }
+
+  .login {
+    @include flexInline;
+    justify-content: space-between;
+    width: 10.3rem;
+
+    a {
+      text-decoration: none;
+      color: $p;
+      font-size: 1.1rem;
+      font-weight: bold;
+      opacity: 0.5;
+      margin-right: 3px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:last-child {
+        display: inline-block;
+        padding: 10px;
+        background-color: #121212;
+        color: #fff;
+        border-radius: 5px;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+// main
+
+.sectionOne {
+  width: 100%;
+  @include flexInline;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+
+  article {
+    width: 60%;
+    // background-color: purple;
+    padding-top: 30px;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      padding-bottom: 3rem;
+      width: 80%;
+      color: $h;
+    }
+
+    p {
+      color: $p;
+      font-weight: lighter;
+      line-height: 1.5rem;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-top: 1rem;
+
+      li {
+        list-style: url("../Assets/Checkmark.svg");
+        color: $p;
+        list-style-position: inside;
+        padding: 5px;
+        font-size: 1rem;
+
+        b {
+          display: inline-block;
+          transform: translate(8px, -7px);
+        }
+      }
+    }
+
+    .regis {
+      padding: 10px 10px 4rem 10px;
+      margin-top: 10px;
+
+      input {
+        padding: 0.7rem;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+      }
+
+      button {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: min(0.9rem, 1rem) min(1rem, 1.1rem);
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: bold;
+        color: #fff;
+        background-color: #121212;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+
+  .mockupOne {
+    width: 40%;
+    height: 38rem;
+    border-radius: 5px;
+    display: block;
+    background: url("../Assets/Hero Image (Desktop).png");
+    background-size: cover;
+    // img {
+    //   width: 100%;
+    // }
+  }
+}
+
+.brand {
+  @include flexInline;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+
+  img {
+    width: 10vw;
+  }
+}
+
+.sectionTwo {
+  @include flexInline;
+  justify-content: flex-start;
+  background: url("../Assets/Phone Mockup (Desktop).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-bottom: 5rem;
+  margin-bottom: 2rem;
+  article {
+    width: 40%;
+    padding: 7rem 0 0rem 7rem;
+
+    h2 {
+      color: $h;
+      font-size: 2rem;
+    }
+
+    p {
+      color: $p;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 20px 0;
+    }
+
+    a {
+      font-weight: bold;
+      color: $p;
+    }
+  }
+}
+
+.sectionThree {
+  @include flexInline;
+  justify-content: space-between;
+
+  picture {
+    width: 65%;
+  }
+
+  article {
+    width: 35%;
+
+    h2 {
+      font-size: 2rem;
+      color: $h;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $p;
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
+    }
+
+    a {
+      font-weight: bold;
+      color: $p;
+    }
+  }
+}
+
+.footer {
+  background-color: #121212;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 2rem;
+
+    h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      margin-top: 3rem;
+    }
+
+    p,
+    a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    li {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    justify-content: center;
+  }
+
+  .sectionOne {
+    flex-direction: column-reverse;
+    article {
+      width: 100%;
+      h1 {
+        font-size: 2.5rem;
+        padding-bottom: 1.8rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      li {
+        b {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .mockupOne {
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      background: url("../Assets/Hero Image (Tablet).png");
+      background-size: cover;
+    }
+  }
+
+  .brand {
+    height: 5rem;
+  }
+
+  .sectionTwo {
+    background: url("../Assets/Phone Mockup (Tablet).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 3rem 3rem 40vh 3rem;
+    article {
+      width: 100%;
+      padding: 10px;
+      text h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .sectionThree {
+    flex-direction: column-reverse;
+
+    article {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    picture {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100vh);
+      z-index: 3;
+      width: 100%;
+      height: 50vh;
+      background-color: #121212;
+      justify-content: flex-end;
+      transition: 1s;
+      a {
+        display: inline-block;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        color: #fff;
+        opacity: 1;
+        transform: scale(0.9);
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+
+      .up {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        position: absolute;
+        right: 3rem;
+        top: 6rem;
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    .hamburger {
+      display: block;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
