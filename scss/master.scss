@@ -328,6 +328,9 @@ $p: #5f594a; //Paragraph
 }
 
 @media screen and (max-width: 800px) {
+  .header {
+    position: sticky; 
+  }
   .nav {
     justify-content: center;
   }
